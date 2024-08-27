@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>秋の研究進歩報告</title>
+</head>
+<body>
+
+<h1>秋の研究進歩報告</h1>
+<h2>研究テーマ</h2>
+	<p>二次元半導体励起状態の理論</p>
+<h2>研究目的</h2>
+	<p>次世代電子デバイス材料として期待されている層状二次元半導体物質における励起状態物性を、第一原理計算と呼ばれる理論手法に基づき、数値計算によって定量的に明らかにするための研究を行っています。</p>
+<h2>流れ（今まで）</h2>
+<p>MoS2 PtS2 TiS2 WS2 ZrS2<br>Ecutwfc収束計算→K_POINTS収束計算→relax計算（座標修正）→格子定数の収束計算（格子定数修正）</p>
+<h3>step1：Ecutwfc収束計算</h3>
+<p>Ecutwfc＝cutoff energy for wavefunctions</p>
+<div style="width: 100%; float: left;" id="step1">
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/MoS2_ecutwfc_totalenergy_0728.png?raw=true" alt="">
+        <p style="text-align: center;">MoS2のecutwfc = 120 に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/TiS2_ecutwfc_totalenergy_0728.png?raw=true" alt="">
+        <p style="text-align: center;">TiS2のecutwfc = 130 に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/WS2_ecutwfc_totalenergy_0728.png?raw=true" alt="">
+        <p style="text-align: center;">WS2のecutwfc = 140 に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/ZrS2_ecutwfc_totalenergy_0728.png?raw=true" alt="">
+        <p style="text-align: center;">ZrS2のecutwfc = 140 に設定しました。</p>
+    </div>
+</div>
+<div style="width: 100%; float: left;" id="step2">
+    <h3>step2：K_POINTS収束計算</h3>
+    <div style="float: left;">
+        <img src="../収束計算/K_POINTS/MoS2_KPOINTS_totalenergy_0729.png?raw=true" alt="">
+        <p style="text-align: center;">MoS2のK_POINTS = 12 12 1 0 0 0 に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="../収束計算/K_POINTS/TiS2_KPOINTS_totalenergy_0729.png?raw=true" alt="">
+        <p style="text-align: center;">TiS2のK_POINTS = 12 12 1 0 0 0 に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="../収束計算/K_POINTS/WS2_KPOINTS_totalenergy_0729.png?raw=true" alt="">
+        <p style="text-align: center;">WS2のK_POINTS = 12 12 1 0 0 0 に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="../収束計算/K_POINTS/ZrS2_KPOINTS_totalenergy_0730.png?raw=true" alt="">
+        <p style="text-align: center;">ZrS2のK_POINTS = 12 12 1 0 0 0 に設定しました。</p>
+    </div>
+</div>
+<div style="width: 100%; float: left;" id="step3">
+    <h3>step3：relax計算（座標修正）</h3>
+    <div style="float: left; margin-left: 50px;">
+        <h4 style="text-align: center;">MoS2のATOMIC_POSITIONS {crystal}</h4>
+        <table border="1" >
+            <tbody>
+              <tr>
+                <td>Mo(before)</td>
+                <td><br>0.667657783274736</td>
+                <td><br>0.333823884229030</td>
+                <td><br>0.363493485342019</td>
+              </tr>
+              <tr>
+                <td>Mo(after)</td>
+                <td><br>0.6673147938</td>
+                <td><br>0.3341667611</td>
+                <td><br>0.3634934221</td>
+              </tr>
+              <tr>
+                <td>S(before)</td>
+                <td><br>0.333823884229030</td>
+                <td><br>0.667657783274736</td>
+                <td><br>0.414464965146579</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.3339953806</td>
+                <td><br>0.6674863435</td>
+                <td><br>0.4135838958</td>
+              </tr>
+              <tr>
+                <td><br>S(before)</td>
+                <td><br>0.333823884229030</td>
+                <td><br>0.667657783274736</td>
+                <td><br>0.312522005537459</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.3339953773</td>
+                <td><br>0.6674863461</td>
+                <td><br>0.3134031381</td>
+              </tr>
+            </tbody>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+          </table>
+    </div>
+    <div style="float: left; margin-left: 50px;">
+        <h4 style="text-align: center;">TiS2のATOMIC_POSITIONS {crystal}</h4>
+        <table border="1" >
+            <tbody>
+              <tr>
+                <td>Ti(before)</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.095927223381107</td>
+              </tr>
+              <tr>
+                <td>Ti(after)</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.0959671627</td>
+              </tr>
+              <tr>
+                <td>S(before)</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.141638773863192</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.1406243242</td>
+              </tr>
+              <tr>
+                <td><br>S(before)</td>
+                <td><br>0.000000000000000</td>
+                <td><br>0.000000000000000</td>
+                <td><br>0.050327393951140</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.0000000000</td>
+                <td><br>0.0000000000</td>
+                <td><br>0.0513019043</td>
+              </tr>
+            </tbody>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+          </table>
+    </div>
+    <div style="float: left; margin-left: 50px;">
+        <h4 style="text-align: center;">WS2のATOMIC_POSITIONS {crystal}</h4>
+        <table border="1" >
+            <tbody>
+              <tr>
+                <td>W(before)</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.105686319218241</td>
+              </tr>
+              <tr>
+                <td>W(after)</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.1056861837</td>
+              </tr>
+              <tr>
+                <td>S(before)</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.054872336938110</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.0556804510</td>
+              </tr>
+              <tr>
+                <td><br>S(before)</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.156500301498371</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.1556923230</td>
+              </tr>
+            </tbody>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+          </table>
+    </div>
+    <div style="float: left; margin-left: 50px;">
+        <h4 style="text-align: center;">ZrS2のATOMIC_POSITIONS {crystal}</h4>
+        <table border="1" >
+            <tbody>
+              <tr>
+                <td>Zr(before)</td>
+                <td><br>0.000000000000000</td>
+                <td><br>0.000000000000000</td>
+                <td><br>0.000000000000000</td>
+              </tr>
+              <tr>
+                <td>Zr(after)</td>
+                <td><br>-0.0000000000</td>
+                <td><br>-0.0000000000</td>
+                <td><br>0.0144714239</td>
+              </tr>
+              <tr>
+                <td>S(before)</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.149962431830618</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.1303323650</td>
+              </tr>
+              <tr>
+                <td><br>S(before)</td>
+                <td><br>0.333333333333333</td>
+                <td><br>0.666666666666667</td>
+                <td><br>0.046815418332247</td>
+              </tr>
+              <tr>
+                <td>S(after)</td>
+                <td><br>0.3333333333</td>
+                <td><br>0.6666666667</td>
+                <td><br>0.0519740612</td>
+              </tr>
+            </tbody>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+          </table>
+    </div>
+</div>
+<div style="width: 100%; float: left; margin-top: 50px;" id="step4">
+    <h3>step4：格子定数の収束計算（格子定数修正）</h3>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/MoS2_latticeconstant_totalenergy_0808.png?raw=true" alt="">
+        <p style="text-align: center;">MoS2のa = 3.141に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/TiS2_latticeconstant_totalenergy_0808.png?raw=true" alt="">
+        <p style="text-align: center;">TiS2のa = 3.361に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/WS2_latticeconstant_totalenergy_0808.png?raw=true" alt="">
+        <p style="text-align: center;">WS2のa = 3.135に設定しました。</p>
+    </div>
+    <div style="float: left;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/ZrS2_latticeconstant_totalenergy_0808.png?raw=true" alt="">
+        <p style="text-align: center;">ZrS2のa = 3.502に設定しました。</p>
+    </div>
+</div>
+<div style="width: 100%; float: left;" id="step5">
+    <h3>step5：第一原理バンド計算（scf nscf bands）</h3>
+    <div style="width: 100%;">
+        <table>
+            <tbody>
+              <tr>
+                <td>Pseudopotential type</td>
+                <td>USPP</td>
+              </tr>
+              <tr>
+                <td>Functional</td>
+                <td>LDA</td>
+              </tr>
+              <tr>
+                <td><br>element</td>
+                <td><br>file name</td>
+              </tr>
+              <tr>
+                <td>Mo</td>
+                <td>Mo.pz-spn-rrkjus_psl.0.2.UPF</td>
+              </tr>
+              <tr>
+                <td>Ti</td>
+                <td>Ti.pz-spn-rrkjus_psl.1.0.0.UPF</td>
+              </tr>
+              <tr>
+                <td>W</td>
+                <td>W.pz-spn-rrkjus_psl.1.0.0.UPF</td>
+              </tr>
+              <tr>
+                <td>Zr</td>
+                <td>Zr.pz-spn-rrkjus_psl.1.0.0.UPF</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td>S.pz-n-rrkjus_psl.0.1.UPF</td>
+              </tr>
+            </tbody>
+            <colgroup>
+              <col style="width: 50%;">
+              <col style="width: 50%;">
+            </colgroup>
+          </table>
+    </div>
+    <div>
+        <div style="float: left;">
+            <img src="https://github.com/masakiaki/aki-research/blob/main/MoS2_band_structure.png?raw=true" alt="">
+        </div>
+        <div style="float: left; margin-top: 100px;">
+            <p>
+                MoS2.scf.out：<br>highest occupied, lowest unoccupied level (ev):    -2.8708   -1.1024<br>
+            </p>
+            <p>
+                MoS2 band gap = -1.1024 - (-2.8708) = 1.7684 eV
+            </p>
+        </div>
+        
+    </div>
+    <div>
+        <div style="float: left;">
+            <img src="https://github.com/masakiaki/aki-research/blob/main/TiS2_band_structure.png?raw=true" alt="">
+        </div>
+        <div style="float: left; margin-top: 100px;">
+            <p>
+                TiS2.scf.out：<br>highest occupied, lowest unoccupied level (ev):    -3.2443   -3.3006<br>
+            </p>
+            <p style="color: red;">
+                TiS2 band gap = -3.3006 - (-3.2443) = -0.0563 eV????
+            </p>
+        </div>
+        
+    </div>
+    <div>
+        <div style="float: left;">
+            <img src="https://github.com/masakiaki/aki-research/blob/main/WS2_band_structure.png?raw=true" alt="">
+        </div>
+        <div style="float: left; margin-top: 100px;">
+            <p>
+                WS2.scf.out：<br>highest occupied, lowest unoccupied level (ev):    -2.5692   -0.6903<br>
+            </p>
+            <p>
+                WS2 band gap = -0.6903 - (-2.5692) = 1.8789 eV
+            </p>
+        </div>
+        
+    </div>
+    <div>
+        <div style="float: left;">
+            <img src="https://github.com/masakiaki/aki-research/blob/main/ZrS2_band_structure.png?raw=true" alt="">
+        </div>
+        <div style="float: left; margin-top: 100px;">
+            <p>
+                ZrS2.scf.out：<br>highest occupied, lowest unoccupied level (ev):    -2.0987   -3.2219<br>
+            </p>
+            <p style="color: red;">
+                ZrS2 band gap = -3.2219 - (-2.0987) = -1.1232 eV????
+            </p>
+        </div>
+    </div>
+</div>
+<div style="width: 100%; float: left;" id="step6">
+    <div style="width: 100%;"><h3>step6：状態密度計算</h3></div>
+    <h4>DOS計算（scf nscf dos）</h4>
+    <div style="float: left; width: 100%;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/MoS2_density_states.png?raw=true" alt="">
+    </div>
+    <div style="float: left; width: 100%;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/TiS2_density_states.png?raw=true" alt="">
+    </div>
+    <div style="float: left; width: 100%;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/WS2_density_states.png?raw=true" alt="">
+    </div>
+    <div style="float: left; width: 100%;">
+        <img src="https://github.com/masakiaki/aki-research/blob/main/ZrS2_density_states.png?raw=true" alt="">
+    </div>
+    <div style="width: 100%;"><h4>pDOS計算</h4></div>
+</div>
+
+</body>
+</html>
+
